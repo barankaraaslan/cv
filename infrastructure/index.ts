@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+import "source-map-support/register";
 import * as cdk from "aws-cdk-lib";
 import { Construct } from "constructs";
 import * as s3 from "aws-cdk-lib/aws-s3";
@@ -6,7 +8,7 @@ import * as cloudfront from "aws-cdk-lib/aws-cloudfront";
 import * as cloudfrontOrigins from "aws-cdk-lib/aws-cloudfront-origins";
 import { join } from "path";
 
-export class InfrastructureStack extends cdk.Stack {
+export class MainStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
     const bucket = new s3.Bucket(this, "bucket", {
@@ -27,3 +29,6 @@ export class InfrastructureStack extends cdk.Stack {
     });
   }
 }
+
+const app = new cdk.App();
+new MainStack(app, "cv", {});
