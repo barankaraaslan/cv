@@ -2,5 +2,9 @@
   "hosted-zone:account=872456077798:domainName=tinasour.click:region=eu-central-1": {
     "Id": "/hostedzone/Z09955811UTP2WXTRTUFJ",
     "Name": "tinasour.click."
+  },
+  "hosted-zone:account=872456077798:domainName=tinasour.click:region=us-east-1": {
+    "Id": "/hostedzone/Z09955811UTP2WXTRTUFJ",
+    "Name": "tinasour.click."
   }
 }
