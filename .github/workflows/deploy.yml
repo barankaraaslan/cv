@@ -3,6 +3,10 @@ name: Deploy infrastructure to AWS
 on:
   push:
     branches: ["main"]
+    paths:
+      - ".github/workflows/deploy.yml"
+      - "infrastructure"
+      - "cv.pdf"
 
 permissions:
   contents: read
